@@ -8,8 +8,8 @@ export const AppDataSource = new DataSource({
     username: "root",
     password: "root",
     database: "project_typeorm",
-    synchronize: true,
+    synchronize: true, 
     logging: true,
-    entities: ["src/entity/*.ts"],
+    entities: ["src/entities/*.ts"],
     migrations: ["src/database/migrations/*.ts"]
 })
