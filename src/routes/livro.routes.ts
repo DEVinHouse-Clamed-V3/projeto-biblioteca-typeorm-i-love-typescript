@@ -5,10 +5,26 @@ import Livro from "../entities/Livro";
 const livroRoutes = Router();
 const livroRepository = AppDataSource.getRepository(Livro);
 
-livroRoutes.get("/", async (_req: Request, res: Response): Promise<Response> => {
+livroRoutes.get("/", async (req: Request, res: Response): Promise<Response> => {
   try {
-    const livros = await livroRepository.find();
-    return res.status(200).json(livros);
+    const page = parseInt(req.query.page as string) || 1;
+    const limit = parseInt(req.query.limit as string) || 10;
+
+    const offset = (page - 1) * limit;
+
+    // vai buscar o livro com a páginação
+    const [livros, total] = await livroRepository.findAndCount({
+      skip: offset,
+      take: limit,
+    });
+
+    // retorna os livros com informações de paginação
+    return res.status(200).json({
+      data: livros,
+      total,
+      page,
+      last_page: Math.ceil(total / limit),
+    });
   } catch (error) {
     return res.status(500).json({ message: "Erro ao listar livros", error });
   }
@@ -36,9 +52,9 @@ livroRoutes.post("/", async (req: Request, res: Response): Promise<Response> => 
     const livro = livroRepository.create({
       title,
       description,
-      publication_date,
+      publication_date: new Date(publication_date),
       isbn,
-      page_count,
+      page_count: Number(page_count),
       language,
     });
 
