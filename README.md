@@ -8,15 +8,12 @@
   Construindo um projeto do zero com TypeORM, TypeScript, NodeJS, Express e MySQL
 </h1>
 
-<p align="justify">Estes códigos pertencem à playlist do canal do YouTube TecEdu4All. </p> 
-
-<p align="justify">Se gostou do repositório, deixe sua estrela ⭐ </p> 
 
 <br/>
 
 ## 👨🏼‍💻 Professor
 
-- [Felipe Becker Nunes](https://www.linkedin.com/in/felipe-becker-nunes-b561a576/)
+
 
 ## 💻 Playlist/Vídeo
 
@@ -24,14 +21,11 @@
 
 ## ✋🏻 Pré-requisitos
 
-- [Node.js](https://nodejs.org/en/)
+
 
 ## 🔥 Instruções de Instalação e Execução
 
-1. Faça um clone desse repositório;
-2. Rode o comando `npm i`
-3. Configure os dados de conexão no banco no arquivo `data-source.ts`
-4. Rode o comando `npm run dev:server`
+
 
 ## 📝 Licença
 
