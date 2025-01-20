@@ -1,42 +1,95 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/Dfg5egem)
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=17553729&assignment_repo_type=AssignmentRepo)
-<p align="center">
-  <img alt="LogoTecEdu4All" src="https://yt3.googleusercontent.com/dmw2l1Yz24lOBeG175P6ovEnNdNI3zNVoMiUMRNyqE8o_ECDsvU1ttPNRWCB_VAXZlOcLKsiYKQ=s176-c-k-c0x00ffffff-no-rj" width="120px" />
-</p>
 
-<h1 align="center">
-  Construindo um projeto do zero com TypeORM, TypeScript, NodeJS, Express e MySQL
-</h1>
+# Projeto: Gerenciamento de Biblioteca
 
-<p align="justify">Estes códigos pertencem à playlist do canal do YouTube TecEdu4All. </p> 
+Este é um projeto backend desenvolvido utilizando Typescript, TypeORM e Postgres. O sistema permite o gerenciamento de biblioteca, incluindo as  funcionalidades  para criar, listar, buscar, atualizar e deletar livros, autores, leitores e Auditório.
 
-<p align="justify">Se gostou do repositório, deixe sua estrela ⭐ </p> 
+## Funcionalidades
 
-<br/>
+    *Criação das migrations Autores, Livros, Leitores e Auditório
+    *Criação da Entides para Autores, Livros, Leitores e Auditório
+    *Criação das rotas com o CRUD para Autores, Livros, Leitores e Auditório.
 
-## 👨🏼‍💻 Professor
+## Tecnologias utilizadas:
 
-- [Felipe Becker Nunes](https://www.linkedin.com/in/felipe-becker-nunes-b561a576/)
+*	Ambiente de execução: Node.js (>= 14.x)
+*	Banco de dados: PostgreSQL
+*	Linguagem: Typescript com o TypeORM
+*   Framework: Express.js
+  
+## Professor
+* Douglas Cavalcante
 
-## 💻 Playlist/Vídeo
+## Squad do projeto
+* Autores: Gustavo Branquinho
+* Livros: Brian Souza
+* Leitores: Anderson Demetrio
+* Auditório: Alexandro Oliveira
+  
+## Configuração Inicial
 
-- [Construíndo um projeto do zero com TypeORM, TypeScript, NodeJS, Express e MySQL](https://youtu.be/c74zNWoCJiA)
+## Instalação:
+1.	Clone o repositório:
+```sh
+git clone https://github.com/DEVinHouse-Clamed-V3/projeto-biblioteca-typeorm-i-love-typescript
+````
+2.	Acesse o diretório do projeto:
+```sh
+cd projeto-biblioteca-typeorm-i-love-typescript
+```
+3.	Instale as dependências:
+```sh
+*	npm install
+    ou
+*   yarn install
 
-## ✋🏻 Pré-requisitos
+```
 
-- [Node.js](https://nodejs.org/en/)
+6.	Configure o banco de dados
 
-## 🔥 Instruções de Instalação e Execução
+    * Crie um banco de dados no Postgres.
+    * Configure as credenciais no arquivo data-sorce.ts do projeto:
+```sh
+    type: "postgres",
+    host: "localhost",
+    port: 5432,
+    username: "nome do usuário",
+    password: "Senha",
+    database: "nome do banco",
+    synchronize: true,
+    logging: true,
+    entities: [Livro, Auditorio, Leitor, Autor],
+    migrations: ["src/database/migrations/*.ts"]
+```
 
-1. Faça um clone desse repositório;
-2. Rode o comando `npm i`
-3. Configure os dados de conexão no banco no arquivo `data-source.ts`
-4. Rode o comando `npm run dev:server`
+7.	Execute as migrações para criar as tabelas no banco de dados:
 
-## 📝 Licença
+```sh
+npm run typeorm migration:run
+# ou
+yarn typeorm migration:run
+```
+
+O servidor estará rodando em http://localhost:3000 por padrão.
+
+## Vídeo do projeto:
+
+Autores
+```sh
+
+```
+Livros
+```sh
+
+```
+ Leitores 
+ ```sh
+
+```
+ Auditório
+ ```sh
+https://drive.google.com/drive/folders/1uj7s9qe_m_rzb76a7NJGnDGSjJG2X-Jn?usp=drive_link
+```
+
+## Licença
 
 - Este projeto tem licença MIT. 
-
----
-
-[Inscreva-se no canal para ver estes vídeos e muito mais!](https://www.youtube.com/channel/UClIDejJoLMKCfXKEyi5ZTWQ)
