@@ -12,9 +12,9 @@ Este é um projeto backend desenvolvido utilizando Typescript, TypeORM e Postgre
 ## Tecnologias utilizadas:
 
 *	Ambiente de execução: Node.js (>= 14.x)
-*	Banco de dados: PostgreSQL
+*	Banco de dados: PostgreSQL & MySQL
 *	Linguagem: Typescript com o TypeORM
-*   Framework: Express.js
+*   Framework: Express.js e Swagger UI
   
 ## Professor
 * Douglas Cavalcante
@@ -79,7 +79,7 @@ Autores
 ```
 Livros
 ```sh
-
+https://drive.google.com/file/d/1ArjfXdY9WczucVOv3021YmnkSZz8j5kC/view?usp=drive_link
 ```
  Leitores 
  ```sh
